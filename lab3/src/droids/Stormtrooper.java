@@ -14,8 +14,11 @@ public class Stormtrooper extends Droid {
     }
 
     public void shoot(Droid target){
-        target.SetHealth(target.getHealth() + (target.getShield() - this.damage));
-    };
+        int recuredAcuracy = (int) (Math.random() * 100);
+        if(recuredAcuracy < this.accuracy) {
+            target.SetHealth(target.getHealth() + (target.getShield() - this.damage));
+        }
+        };
 
     public void increaseShield(){
         this.shield += 5;
@@ -30,7 +33,6 @@ public class Stormtrooper extends Droid {
         System.out.println("Choose option: ");
         System.out.println("1) Shoot");
         System.out.println("2) Increase shield");
-        //System.out.println("3) Ultimate Stormtrooper attack(-1 AP), shoot all at one turn");
         int inp;
 
         if(this.AP <= 0){

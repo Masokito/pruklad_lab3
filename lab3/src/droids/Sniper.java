@@ -15,8 +15,12 @@ public class Sniper extends Droid {
     }
 
     public void shoot(Droid target){
-        target.SetHealth(target.getHealth() + (target.getShield() - this.damage));
-    };
+
+        int recuredAcuracy = (int) (Math.random() * 100);
+        if(recuredAcuracy < this.accuracy) {
+            target.SetHealth(target.getHealth() + (target.getShield() - this.damage));
+        }
+        };
 
     public void increaseShield(){
         this.shield += 5;
@@ -38,7 +42,7 @@ public class Sniper extends Droid {
             inp = Menu.getNumberInRange(1,2);
 
         } else {
-            System.out.println("3) Hit enemy with 100%chance and deal 2x damage");
+            System.out.println("3)Ultimate Hit enemy with 100%chance and deal 3x damage(-1 AP)");
             inp = Menu.getNumberInRange(1,3);
         }
         switch (inp){
@@ -53,8 +57,9 @@ public class Sniper extends Droid {
                 Battle.setMessage(this.name + "  increased its shield");
                 break;
             case 3 :
+                System.out.println("Choose enemy to shoot ");
                 inp = Menu.getNumberInRange(1,enemyTeam.size());
-                doUltimate(enemyTeam.get(inp));
+                doUltimate(enemyTeam.get(inp-1));
                 Battle.setMessage(this.name + "   performed  ultimate");
                 break;
         }

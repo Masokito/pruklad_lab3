@@ -17,8 +17,11 @@ public class Healer extends Droid {
     }
 
     public void shoot(Droid target){
-        target.SetHealth(target.getHealth() + (target.getShield() - this.damage));
-    };
+        int recuredAcuracy = (int) (Math.random() * 100);
+        if(recuredAcuracy < this.accuracy) {
+            target.SetHealth(target.getHealth() + (target.getShield() - this.damage));
+        }
+        };
 
     public void increaseShield(){
         this.shield += 5;
