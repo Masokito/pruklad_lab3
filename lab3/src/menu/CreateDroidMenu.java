@@ -27,8 +27,8 @@ public class CreateDroidMenu extends Menu {
                 damage = getNumberInRange(0,500);
                 System.out.println("Type droid shield(0-500):");
                 shield = getNumberInRange(0,500);
-                System.out.println("Type droid accuracy(0-500):");
-                accuracy = getNumberInRange(0,500);
+                System.out.println("Type droid accuracy(0-100):");
+                accuracy = getNumberInRange(0,100);
                 System.out.println("Type droid AP{Ability Power}(0-45):");
                 AP = getNumberInRange(0,45);
                 DroidList.add(new Stormtrooper(name,health,damage,shield,accuracy,AP));
@@ -43,8 +43,8 @@ public class CreateDroidMenu extends Menu {
                 damage = getNumberInRange(0,500);
                 System.out.println("Type droid shield(0-500):");
                 shield = getNumberInRange(0,500);
-                System.out.println("Type droid accuracy(0-500):");
-                accuracy = getNumberInRange(0,500);
+                System.out.println("Type droid accuracy(0-100):");
+                accuracy = getNumberInRange(0,100);
                 System.out.println("Type droid AP{Ability Power}(0-45):");
                 AP = getNumberInRange(0,45);
                 DroidList.add(new Healer(name,health,damage,shield,accuracy,AP));
@@ -59,8 +59,8 @@ public class CreateDroidMenu extends Menu {
                 damage = getNumberInRange(0,500);
                 System.out.println("Type droid shield(0-500):");
                 shield = getNumberInRange(0,500);
-                System.out.println("Type droid accuracy(0-500):");
-                accuracy = getNumberInRange(0,500);
+                System.out.println("Type droid accuracy(0-100):");
+                accuracy = getNumberInRange(0,100);
                 System.out.println("Type droid AP{Ability Power}(0-45):");
                 AP = getNumberInRange(0,45);
                 DroidList.add(new Sniper(name,health,damage,shield,accuracy,AP));
