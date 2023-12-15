@@ -22,13 +22,14 @@ public class Sniper extends Droid {
         }
         };
 
-    public void increaseShield(){
-        this.shield += 5;
-    };
 
 
-    public void doUltimate(Droid target){
-        target.setHealth(target.getHealth() + (target.getShield() - (this.damage*3)));
+
+    public void doUltimate(Droid target) {
+        if (this.AP > 0) {
+            this.AP -= 1;
+            target.setHealth(target.getHealth() + (target.getShield() - (this.damage * 3)));
+        }
     }
 
 

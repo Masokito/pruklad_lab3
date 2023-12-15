@@ -29,10 +29,12 @@ public class Droid implements Cloneable{
     public int getDamage(){return this.damage;}
     public int getAccuracy(){return this.accuracy;}
     public int getShield(){return this.shield;}
+    public int getAP(){return this.AP;}
     public void setHealth(int health){this.health = health;}
     public void setDamage(int damage){this.damage = damage;}
     public void setAccuracy(int accuracy){this.accuracy = accuracy;}
     public void setShield(int shield){this.shield = shield;}
+    public void setAP(int AP){this.AP = AP;}
 
     public String toString(){
         return "Name---->|" + this.name + "|Health---->|" + this.health + "|";
@@ -42,6 +44,10 @@ public class Droid implements Cloneable{
     public void heal(){};
     public void shoot(){};
     public void startDroidMenu(List<Droid> myTeam, List<Droid> enemyTeam){}
+
+    public void increaseShield(){
+        this.shield += 1;
+    };
 
     };
 

@@ -23,9 +23,7 @@ public class Healer extends Droid {
         }
         };
 
-    public void increaseShield(){
-        this.shield += 5;
-    };
+
 
 
 
@@ -34,9 +32,12 @@ public class Healer extends Droid {
     }
 
     public void doUltimate(List<Droid> myTeam){
-        for(Droid ally:myTeam){
-            heal(ally);
+        if (this.AP > 0) {
+            this.AP -= 1;
+            for(Droid ally:myTeam){
+             heal(ally);
         }
+    }
     }
 
 

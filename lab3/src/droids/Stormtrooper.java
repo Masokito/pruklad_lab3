@@ -20,14 +20,15 @@ public class Stormtrooper extends Droid {
         }
         };
 
-    public void increaseShield(){
-        this.shield += 5;
-    };
+
 
     public void doUltimate(List<Droid> enemies){
-        for(Droid enemy:enemies){
-            shoot(enemy);
+        if (this.AP > 0) {
+            this.AP -= 1;
+            for(Droid enemy:enemies){
+                shoot(enemy);
         }
+    }
     }
     public void startDroidMenu(List<Droid> myTeam, List<Droid> enemyTeam){
         System.out.println("Choose option: ");
