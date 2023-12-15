@@ -16,7 +16,7 @@ public class Stormtrooper extends Droid {
     public void shoot(Droid target){
         int recuredAcuracy = (int) (Math.random() * 100);
         if(recuredAcuracy < this.accuracy) {
-            target.SetHealth(target.getHealth() + (target.getShield() - this.damage));
+            target.setHealth(target.getHealth() + (target.getShield() - this.damage));
         }
         };
 

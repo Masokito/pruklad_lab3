@@ -23,13 +23,16 @@ public class Droid implements Cloneable{
         this.health = health;
         this.damage = damage;
     }
+
     public String getName(){return this.name;}
     public int getHealth(){return this.health;}
     public int getDamage(){return this.damage;}
     public int getAccuracy(){return this.accuracy;}
     public int getShield(){return this.shield;}
-    public void SetHealth(int health){this.health = health;}
-    public void SetDamage(int damage){this.health = damage;}
+    public void setHealth(int health){this.health = health;}
+    public void setDamage(int damage){this.damage = damage;}
+    public void setAccuracy(int accuracy){this.accuracy = accuracy;}
+    public void setShield(int shield){this.shield = shield;}
 
     public String toString(){
         return "Name---->|" + this.name + "|Health---->|" + this.health + "|";

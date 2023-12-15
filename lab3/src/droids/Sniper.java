@@ -18,7 +18,7 @@ public class Sniper extends Droid {
 
         int recuredAcuracy = (int) (Math.random() * 100);
         if(recuredAcuracy < this.accuracy) {
-            target.SetHealth(target.getHealth() + (target.getShield() - this.damage));
+            target.setHealth(target.getHealth() + (target.getShield() - this.damage));
         }
         };
 
@@ -28,7 +28,7 @@ public class Sniper extends Droid {
 
 
     public void doUltimate(Droid target){
-        target.SetHealth(target.getHealth() + (target.getShield() - (this.damage*3)));
+        target.setHealth(target.getHealth() + (target.getShield() - (this.damage*3)));
     }
 
 
